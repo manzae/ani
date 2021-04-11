@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>TAEYEON</title>
+	<link rel="shortcut icon" href="images/favicon/fav.png">
+	<link rel="apple-touch-icon-precomposed" href="images/favicon/touchfav.png">
+	<link rel="stylesheet" href="css/reset_reactive.css">
+	<link rel="stylesheet" href="css/mz_font.css">
+	<link rel="stylesheet" href="css/taeyeon.css">
+
+	
+	<!--1. 박스슬라이더 CSS 추가-->
+	<link rel="stylesheet" href="css/jquery.bxslider.css">
+	<!--박스슬라이더 커스텀 CSS-->
+	<style>
+		/*박스 슬라이더 최상위 박스*/
+		article{
+			max-width: 1920px;
+			margin: 0 auto;
+		}
+		article #gallery_wrap{
+			max-width: 1920px;
+		}
+		article #gallery_wrap img{
+			width: 100%;
+		}
+	</style>
+	
+	
+	<script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>	
+	<!--2. 박스슬라이더 플러그인 추가-->
+	<script src="js/jquery.bxslider.js"></script>
+	
+	<!--박스슬라이더 커스텀 스크립트 구현-->
+	<script>
+		$(function(){
+			$('.slide_gallery').bxSlider({
+				mode : 'fade',
+				auto : true,
+				autoControls : false,
+				autoHover : true,
+				pager: true,
+				slideWidth: 1920
+			});
+		});
+	</script>
+	
+	<!--애니메이션-->
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        $(document).ready(function(){
+            AOS.init();
+        })
+    </script>
+</head>
+<body>
+	<div id="wrap">
+		<!--1. 헤더영역 시작-->
+		<header class="header cf">
+			<!--로고 시작-->
+			<h1 class="logo">
+				<a href="#">TAEYEON</a>
+			</h1>
+			<!--로고 끝-->
+			<!--GNB메뉴 시작-->
+			<nav>
+				<ul class="gnb">
+					<li><a href="#">HOME</a></li>
+					<li><a href="#communication">COMMUNICATION</a></li>
+					<li><a href="#album">ALBUM</a></li>
+					<li><a href="#store">STORE</a></li>
+					<li><a href="#contact">CONTACT</a></li>
+				</ul>
+			</nav>
+			<!--GNB메뉴 끝-->
+			<!--모바일 햄버거 메뉴시작-->
+			<!--<input type="checkbox" id="gnb_check">-->
+			<label for="gnb_check" class="menu_toggle_btn">
+				<span></span>
+				<span></span>
+				<span></span>
+			</label>
+			<!--모바일 햄버거 메뉴끝-->
+		</header>
+		<!--1. 헤더영역 끝-->
+		
+		<!--2. 슬라이드영역 시작-->
+<!--
+		<article class="slider">
+			<div class="slider_img">
+				<img src="images/p_images/slide01.jpg" alt="슬라이드_이미지">
+			</div>
+		</article>
+-->
+		<!--2. 슬라이드영역 끝-->
+		
+		
+		<!--2-1. 슬라이드 제이쿼리 플러그인 영역 시작-->
+			<article class="slider">
+				<div id="gallery_wrap">
+					<ul class="slide_gallery">
+						<li><img src="images/p_images/slide01.jpg" alt="슬라이드이미지1"></li>
+						<li><img src="images/p_images/slide02.jpg" alt="슬라이드이미지2"></li>
+						<li><img src="images/p_images/slide03.jpg" alt="슬라이드이미지3"></li>
+						<li><img src="images/p_images/slide04.jpg" alt="슬라이드이미지4"></li>
+						<li><img src="images/p_images/slide05.jpg" alt="슬라이드이미지5"></li>
+						<li><img src="images/p_images/slide06.jpg" alt="슬라이드이미지6"></li>
+						<li><img src="images/p_images/slide07.jpg" alt="슬라이드이미지7"></li>
+					</ul>
+				</div>
+			</article>
+		<!--2-1. 슬라이드 제이쿼리 플러그인 영역 끝-->
+		
+		<!--3. 콘텐츠 영역 시작-->
+		<section class="content" id="communication">
+		
+			<!--3-1. 커뮤니케이션 영역 시작-->
+			<section class="communication_section container">
+				<div class="cf">
+					<h2 class="sec_title" data-aos="fade-right">COMMUNICATION</h2>
+					<p class="desc">
+						From 'YouTube' with a variety of content to 'Lysn' where you can receive private messages!<br>
+						Let's communicate with my favorite artist TAEYEON in various ways.
+					</p>
+				</div>
+			</section>
+			<!--3-1. 커뮤니케이션 영역 끝-->
+			
+			<!--3-2. 프로모션 영역 시작-->
+			<section class="promotion_section container">
+				<div>
+					<ul class="promotion_list cf">
+						<li>
+							<a href="#">
+								<img src="images/s_images/promo01.png" alt="YOUTUBE">
+								<h3>YOUTUBE</h3>
+								<p>
+									SMTOWN<br>
+                                    GIRLS’ GENERATION<br> 
+                                    <span>탱구</span>TV
+								</p>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="images/s_images/promo02.png" alt="INSTAGRAM">
+								<h3>INSTAGRAM</h3>
+								<p>
+									@girlsgeneration<br>
+                                    @taeyeon_ss <br>
+                                    @zero.taeyeon
+								</p>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="images/s_images/promo03.png" alt="VLIVE">
+								<h3>VLIVE</h3>
+								<p>
+									SMTOWN <br>
+                                    Welcome to SMTOWN Channel! <br>
+                                    #K-POP #MUSIC #MUSIC_VIDEO
+								</p>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="images/s_images/promo04.png" alt="LYSN">
+								<h3>LYSN</h3>
+								<p>
+									S♡NE (<span>소원</span>) <br>
+                                    Meet a private message <br>
+                                    from your favorite Artist!
+								</p>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<!--3-2. 프로모션 영역 끝-->
+			
+		<hr class="divider">
+		
+			<!--3-3. 최근작업영역 시작-->
+			<section class="work_section" id="album">
+				<div>
+                    <div class="container">
+                        <h2 class="sec_title" data-aos="fade-right">ALBUM</h2>
+                    </div>
+					<ul class="work_list cf">
+						<li>
+							<a href="#">
+								<div>
+									<h3>Happy</h3>
+									<span>2020.05.04</span>
+								</div>
+								<img src="images/p_images/work01.jpg" alt="앨범 happy">
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div>
+									<h3>Purpose - The 2nd Album Repackage</h3>
+									<span>2020.01.15</span>
+								</div>
+								<img src="images/p_images/work02.jpg" alt="앨범 purpose repackage">
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div>
+									<h3>사계 (Four Seasons)</h3>
+									<span>2019.03.24</span>
+								</div>
+								<img src="images/p_images/work03.jpg" alt="앨범 4season">
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div>
+									<h3>Stay</h3>
+									<span>2018.06.30</span>
+								</div>
+								<img src="images/p_images/work04.jpg" alt="앨범 stay">
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div>
+									<h3>My Voice - The 1st Album Deluxe Edition</h3>
+									<span>2017.04.05</span>
+								</div>
+								<img src="images/p_images/work05.jpg" alt="앨범 my voice repackage">
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div>
+									<h3>My Voice - The 1st Album</h3>
+									<span>2017.02.28</span>
+								</div>
+								<img src="images/p_images/work06.jpg" alt="앨범 my voice">
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div>
+									<h3>Why- The 2nd Mini Album</h3>
+									<span>2016.06.28</span>
+								</div>
+								<img src="images/p_images/work07.jpg" alt="앨범 why">
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div>
+									<h3>I - The 1st Mini Album</h3>
+									<span>2015.10.07</span>
+								</div>
+								<img src="images/p_images/work08.jpg" alt="앨범 I">
+							</a>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<!--3-3. 최근작업영역 끝-->
+			
+		<hr class="m_divider">
+		
+			<!--3-4. 스토어영역 시작-->
+			<section class="store_section container" id="store">
+				<div class="cf">
+					<h2 class="sec_title" data-aos="fade-right">STORE</h2>
+					<ul class="store_list">
+						<li>
+							<a href="#">
+								<img src="images/p_images/store01.jpg" alt="블로그 이미지01">
+							</a>
+							<p>
+							   [TAEYEON X ZERO] SPAO 
+							</p>
+							<a href="#">
+								<h3>
+									GRIP TOK CHECK
+								</h3>
+							</a>
+							<h4>
+							    &#8361; 9,900
+							</h4>
+						</li>
+						<li>
+							<a href="#">
+								<img src="images/p_images/store02.jpg" alt="블로그 이미지02">
+							</a>
+							<p>
+							   GIRLS' GENERATION-Oh!GG 
+							</p>
+							<a href="#">
+								<h3>
+									LOVELOVE KEYRING
+								</h3>
+							</a>
+							<h4>
+							    &#8361; 25,000
+							</h4>
+						</li>
+						<li>
+							<a href="#">
+								<img src="images/p_images/store03.jpg" alt="블로그 이미지03">
+							</a>
+							<p>
+							   GIRLS' GENERATION 
+							</p>
+							<a href="#">
+								<h3>
+									OFFICIAL FANLIGHT
+								</h3>
+							</a>
+							<h4>
+							    &#8361; 35,000
+							</h4>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<!--3-4. 블로그작업영역 끝-->
+			
+			<!--3-5. 연락처작업영역 시작-->
+			<section class="contact_section container" id="contact">
+				<div class="cf">
+					<h2 class="sec_title" data-aos="fade-right">CONTACT</h2>
+					<div>
+						<form action="#" class="form_box">
+							<fieldset class="cf">
+								<legend class="blind">CONTACT US</legend>
+								<!--input 폼 시작-->
+								<div class="form">
+									<label for="name" class="blind">Name</label>
+									<input type="text" id="name" placeholder="Name" required="required" autocomplete="off">
+									<label for="phone" class="blind">Phone</label>
+									<input type="text" id="phone" placeholder="Phone" required="required" autocomplete="off">
+									<label for="email" class="blind">E-mail</label>
+									<input type="email" id="email" placeholder="Email Address" required="required">
+								</div>
+								<!--input 폼 끝-->
+								<!--textarea 폼 시작-->
+								<div class="txta">
+									<label for="message" class="blind">Message</label>
+									<textarea id="message" placeholder="Message"></textarea>
+								</div>
+								<!--textarea 폼 끝-->
+							</fieldset>
+							<!--버튼 시작-->
+							<div class="send_btn">
+								<button>
+									SEND MESSAGE
+								</button>
+							</div>
+							<!--버튼 끝-->
+						</form>
+					</div>
+				</div>
+			</section>
+			<!--3-5. 연락처작업영역 끝-->
+		</section>
+		<!--3. 콘텐츠 영역 끝-->
+		
+		<!--4. 푸터영역 시작-->
+		<footer class="footer">
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6329.147610264832!2d127.04664153488768!3d37.517968999999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca36dfd50f1b9%3A0xfc1a21ccfe4444e4!2zU03sl5TthLDthYzsnbjrqLztirg!5e0!3m2!1sko!2skr!4v1600751823283!5m2!1sko!2skr" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+			<p>
+				Copyright © 2020 SM Entertainment. All Rights Reserved.
+			</p>
+		</footer>
+		<!--4. 푸터영역 끝-->
+	</div>
+</body>
+</html>
+<script>
+	$('.menu_toggle_btn').click(function(){
+		$('.gnb').stop().toggle();
+	});
+</script>

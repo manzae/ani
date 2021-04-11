@@ -1,0 +1,828 @@
+@charset "utf-8";
+/*공통 CSS*/
+/*클리어 픽스 : 플롯해제 클래스*/
+.cf:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+/*모든 환경에는 보이지는 않지만, 반드시 입력해야하는 html태그가 존재함
+= 해당 요소를 숨기기 위해 클래스 제작*/
+.blind{
+	position: absolute;
+	width: 0;
+	height: 0;
+	line-height: 0;
+	text-indent: -9999px;
+	overflow: hidden;
+}
+/*지정 너비로 사용하게 하는 클래스*/
+.container{
+	width: 1132px;
+	width: 90%;
+	max-width: 1132px;
+	margin: 0 auto;
+}
+/*전체글꼴*/
+body{
+    font-family: "Montserrat", sans-serif;
+}
+/*제목 스타일*/
+.sec_title{
+	font-size: 42px;
+	color: #616161;
+}
+/*구분선 영역 스타일*/
+.divider{
+	width: 90%;
+	max-width: 1132px;
+	margin: 0 auto;
+	margin-top: 80px;
+	background: #eee;
+}
+.m_divider{
+	width: 20px;
+	margin: 0 auto;
+	margin-top: 80px;
+	background: #616161;
+}
+/*모바일용 미디어쿼리(공통 CSS로 사용)*/
+/*1. 헤더영역*/
+.header{
+	padding: 18px 5%;
+	/*위치기준값*/
+	position: relative;
+}
+/*로고*/
+.header .logo{
+	/*플롯*/
+	float: left;
+}
+.header .logo a{
+    font-size: 20px;
+    color: #000;
+    font-weight: 900;
+    letter-spacing: 5px;
+}
+/*GNB메뉴*/
+.header nav{}
+.header .gnb{
+	/*모바일에서 로딩시 안보이게 하기*/
+	display: none;
+	width: 100%;
+	background: #fff;
+	/*포지션*/
+	position: absolute;
+	left: 0;
+	top: 100%;
+	
+	z-index: 99999;
+}
+.header .gnb li{
+	border-bottom: 1px solid #f5f5f5;
+	padding-left: 20px;
+}
+.header .gnb li a{
+	display: block;
+	font-size: 14px;
+	padding: 14px 0 14px 5%;
+    color: #616161;
+}
+.header .gnb li a:hover{
+    font-weight: bold;
+}
+/*햄버거 메뉴 CSS*/
+.header .menu_toggle_btn{
+	width: 20px;
+	margin-top: 4px;
+	cursor: pointer;
+	/*플롯*/
+	float: right;
+}
+/*햄버거 메뉴바 CSS*/
+.header .menu_toggle_btn span{
+	display: block;
+	width: 100%;
+	height: 2px;
+	background-color: #616161;
+}
+.header .menu_toggle_btn span:nth-child(2){
+	margin: 5px 0;
+}
+
+
+
+
+/*
+모바일 GNB메뉴
+input[id='gnb_check']{
+	display: none;
+}
+.mobile_gnb_menu li{
+	padding: 20px;
+	padding-left: 20px;
+}
+.mobile_gnb{
+	display: none;
+}
+input[id='gnb_check']:checked +label +nav{
+	display: block;
+}*/
+
+
+
+
+
+/*2. 슬라이드영역*/
+/*
+.slider .slider_img{
+	max-width: 100%;
+	width: 100%;
+}
+.slider .slider_img img{
+	max-width: 100%;
+	width: 100%;
+}
+*/
+
+/*3-1. 커뮤니케이션영역*/
+.content{}
+.communication_section{
+	margin-top: 60px;
+	text-align: center;
+}
+.communication_section .sec_title{
+	margin-bottom: 30px;
+	font-size: 30px;
+    letter-spacing: -1.2px;
+}
+.communication_section .desc{
+	color: #9e9e9e;
+	line-height: 2;
+    font-size: 12px;
+}
+
+/*3-2. 프로모션영역*/
+.promotion_section{
+	margin-top: 68px;
+}
+.promotion_section .promotion_list li{
+	margin-top: 50px;
+	text-align: center;
+}
+.promotion_section .promotion_list li:nth-child(1){
+	margin-top: 0;
+}
+.promotion_section .promotion_list li img{
+	height: 52px;
+}
+.promotion_section .promotion_list li h3{
+	margin: 30px 0 20px;
+	color: #616161;
+}
+.promotion_section .promotion_list li p{
+	font-size: 14px;
+	color: #616161;
+	line-height: 1.5;
+}
+.promotion_section .promotion_list li p{
+    font-family: "nanumgothic", sans-serif;
+}
+
+/*3-3. 최근작업영역*/
+.work_section{
+    margin-top: 74px;
+}
+.work_section .sec_title{
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 48px;
+}
+.work_section .work_list{}
+.work_section .work_list li{
+    width: 100%;
+}
+.work_section .work_list li a{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.work_section .work_list li img{
+    max-width: 100%;
+    width: 100%;
+}
+
+/*3-4. 스토어영역 시작*/
+.store_section{
+    margin-top: 80px;
+}
+.store_section .sec_title{
+    margin-bottom: 48px;
+    text-align: center;
+}
+.store_section .store_list{}
+.store_section .store_list li{
+    margin-top: 48px;
+    width: 100%;
+}
+.store_section .store_list li:nth-child(1){
+    margin-top: 0;
+}
+.store_section .store_list li img{
+    max-width: 100%;
+    width: 100%;
+}
+.store_section .store_list li p{
+    font-size: 12px;
+    color: #9e9e9e;
+    margin: 10px 0;
+}
+.store_section .store_list li h3{
+    color: #424242;
+    line-height: 1.6;
+}
+.store_section .store_list li h4{
+    font-weight: bold;
+    color: #616161;
+    margin-top: 15px;
+}
+
+/*3-5. 연락처작업영역*/
+.contact_section{
+    margin-top: 100px;
+}
+.contact_section .sec_title{
+    margin-bottom: 48px;
+    text-align: center;
+}
+/*input요소 CSS*/
+.contact_section .form_box .form input{
+    padding-bottom: 14px;
+    margin-bottom: 40px;
+}
+.contact_section .form_box .txta textarea{
+    height: 170px;
+}
+/*버튼 CSS*/
+.contact_section .form_box .send_btn{
+    margin-top: 36px;
+    text-align: right;
+}
+.contact_section .form_box .send_btn button{
+    font-size: 12px;
+    color: #fff;
+    background: #616161;
+    font-family: "Montserrat", sans-serif;
+    padding: 15px;
+    border: 0;
+    cursor: pointer;
+}
+
+/*4. 푸터영역*/
+.footer{
+    margin-top: 100px;
+}
+.footer iframe{
+    width: 100%;
+    height: 320px;
+}
+.footer p{
+    margin: 20px 0;
+    color: #9e9e9e;
+    text-align: center;
+    font-size: 14px;
+    font-size: 0.875rem;
+}
+
+/*트랜지션 애니메이션 효과*/
+.work_section .work_list li a{
+	/*포지션*/
+	position: relative;
+}
+.work_section .work_list li a:before{
+	display: block;
+	width: 100%;
+	height: 100%;
+	/*포지션*/
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 100;
+	background: #616161;
+	content: "";
+	opacity: 0;
+	-webkit-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+}
+.work_section .work_list li a:hover:before{
+	opacity: 0.8;
+}
+.work_section .work_list li div{
+	/*포지션*/
+	position: absolute;
+	left: 30px;
+	top: 0;
+	z-index: 200;
+	opacity: 0;
+	-webkit-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+}
+.work_section .work_list li a:hover div{
+	opacity: 1;
+	-webkit-transform: translateY(30px);
+	-o-transform: translateY(30px);
+	transform: translateY(30px);
+}
+.work_section .work_list li div h3{
+	font-size: 24px;
+	color: #fff;
+	margin-bottom: 8px;
+}
+.work_section .work_list li div span{
+	font-size: 11px;
+	color: #fff;
+}
+
+
+
+
+
+
+
+
+/*태블릿용 미디어쿼리(768px이상)*/
+@media screen and (min-width:768px){
+	/*1. 헤더영역*/
+	.header{
+		padding: 18px 5%;
+		/*위치기준값*/
+		position: relative;
+	}
+	/*로고*/
+	.header .logo{
+		/*플롯*/
+		float: left;
+	}
+	.header .logo a{
+		font-size: 20px;
+	    color: #000;
+	}
+	/*GNB메뉴*/
+	.header nav{}
+	.header .gnb{
+		/*GNB메뉴 보이도록 수정*/
+		display: block !important;
+		width: auto;
+		/*배경색 수정*/
+		background: none;
+		/*포지션 수정*/
+		position: static;
+		/*플롯*/
+		float: right;
+	}
+	.header .gnb li{
+		/*보더값 수정*/
+		border-bottom: 0;
+		/*플롯*/
+		float: left;
+		padding-left: 0;
+		margin-left: 20px;
+	}
+	.header .gnb li a{
+		display: block;
+		/*폰트크기 수정*/
+		font-size: 16px;
+		/*패딩값 수정*/
+		padding: 0;
+		padding-top: 5px;
+	}
+	/*햄버거 메뉴 CSS*/
+	.header .menu_toggle_btn{
+		/*추가*/
+		display: none;
+	}
+	/*모바일 GNB 안보이게*/
+	nav.mobile_gnb{
+		display: none;
+	}
+	
+	/*3-1. 커뮤니케이션영역*/
+	.communication_section{
+		/*값 수정*/
+		margin-top: 100px;
+		text-align: center;
+	}
+	.communication_section .sec_title{
+		margin-bottom: 30px;
+		font-size: 42px;
+	}
+    .communication_section .desc{
+        color: #9e9e9e;
+        line-height: 2;
+        font-size: 12px;
+    }
+    
+	/*3-2. 프로모션영역*/
+	.promotion_section{
+		/*값 수정*/
+		margin-top: 110px;
+	}
+	.promotion_section .promotion_list li{
+		width: 177px;
+		/*(177/768*100)*/
+		width: 23.046875%;
+		margin-left: 20px;
+		/*(20/768*100)*/
+		margin-left: 2.604166666666667%;
+		/*값 수정*/
+		margin-top: 0;
+		text-align: center;
+		/*플롯*/
+		float: left;
+	}
+	.promotion_section .promotion_list li:nth-child(1){
+		margin-left: 0;
+	}
+	.promotion_section .promotion_list li img{
+		height: 52px;
+	}
+	.promotion_section .promotion_list li h3{
+		margin: 30px 0 20px;
+		color: #616161;
+	}
+	.promotion_section .promotion_list li p{
+		font-size: 14px;
+		color: #616161;
+		line-height: 1.5;
+	}
+    
+    /*3-3. 최근작업영역*/
+    .work_section{
+        /*값수정*/
+        margin-top: 100px;
+    }
+    .work_section .sec_title{
+        width: 90%;
+        margin: 0 auto;
+        text-align: center;
+        /*값수정*/
+        margin-bottom: 80px;
+    }
+    .work_section .work_list{}
+    .work_section .work_list li{
+        /*값수정*/
+        width: 50%;
+        /*플롯*/
+        float: left;
+    }
+    .work_section .work_list li a{
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+    .work_section .work_list li img{
+        max-width: 100%;
+        width: 100%;
+    }
+    
+    /*3-4. 스토어영역 시작*/
+    .store_section{
+        /*값수정*/
+        margin-top: 124px;
+    }
+    .store_section .sec_title{
+        margin-bottom: 48px;
+        text-align: center;
+    }
+    .store_section .store_list{}
+    .store_section .store_list li{
+        /*값수정*/
+        margin-top: 0;
+        /*(박스하나 : 728/3=242.6666666666667px)*/
+        /*(242.6666666666667/768)*100*/
+        width: 31.59722222222222%;
+        margin-left: 20px;
+        /*(20/768)*100*/
+        margin-left: 2.604166666666667%;
+        /*플롯*/
+        float: left;
+    }
+    .store_section .store_list li:nth-child(1){
+        /*속성명변경*/
+        margin-left: 0;
+    }
+    .store_section .store_list li img{
+        max-width: 100%;
+        width: 100%;
+    }
+    .store_section .store_list li p{
+        font-size: 12px;
+        color: #9e9e9e;
+        margin: 10px 0;
+    }
+    .store_section .store_list li h3{
+        color: #424242;
+        line-height: 1.6;
+    }
+    
+    /*3-5. 연락처작업영역*/
+    .contact_section{
+        /*값수정*/
+        margin-top: 180px;
+    }
+    .contact_section .sec_title{
+        /*값수정*/
+        margin-bottom: 80px;
+        text-align: center;
+    }
+    .contact_section .form_box .form{
+        width: 374px;
+        /*(374/768)*100*/
+        width: 48.69791666666667%;
+        /*플롯*/
+        float: left;
+    }
+    .contact_section .form_box .txta{
+        width: 374px;
+        /*(374/768)*100*/
+        width: 48.69791666666667%;
+        /*플롯*/
+        float: right;
+    }
+    .contact_section .form_box .form{
+        margin-right: 20px;
+        /*(20/768)*100*/
+        margin-right: 2.604166666666667%;
+    }
+    
+    /*input요소 CSS*/
+    .contact_section .form_box .form input{
+        padding-bottom: 14px;
+        margin-bottom: 40px;
+    }
+    .contact_section .form_box .txta textarea{
+        height: 170px;
+    }
+    /*버튼 CSS*/
+    .contact_section .form_box .send_btn{
+        margin-top: 36px;
+        text-align: right;
+    }
+    .contact_section .form_box .send_btn button{
+        font-size: 12px;
+        color: #fff;
+        background: #616161;
+        font-family: "Montserrat", sans-serif;
+        padding: 15px;
+        border: 0;
+        cursor: pointer;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*PC용 미디어쿼리(1132px이상)*/
+@media screen and (min-width:1132px){
+	/*3-1. 커뮤니케이션영역*/
+	.communication_section{
+		/*값 수정*/
+		margin-top: 100px;
+		/*값 수정*/
+		text-align: left;
+	}
+	.communication_section .sec_title{
+		/*값 수정*/
+		margin-bottom: 0;
+		/*플롯*/
+		float: left;
+	}
+	.communication_section .desc{
+		color: #9e9e9e;
+		line-height: 2;
+        font-size: 12px;
+		/*플롯*/
+		float: right;
+		/*위치기준*/
+		position: relative;
+		padding-left: 20px;
+	}
+	
+/*데코레이션 세로선*/
+	.communication_section .desc:before{
+		display: block;
+		content: "";
+		width: 2px;
+		height: 44px;
+		background-color: #c0c0c0;
+		/*포지션*/
+		position: absolute;
+		left: 0;
+		top: 3px;
+	}
+	
+	/*3-2. 프로모션영역*/
+	.promotion_section{
+		/*값 수정*/
+		margin-top: 110px;
+	}
+	.promotion_section .promotion_list li{
+		width: 268px;
+		/*(268/1132*100)*/
+		width: 23.67491166077739%;
+		margin-left: 20px;
+		/*(20/1132*100)*/
+		margin-left: 1.76678445229682%;
+		/*값 수정*/
+		margin-top: 0;
+		text-align: center;
+		/*플롯*/
+		float: left;
+	}
+	.promotion_section .promotion_list li:nth-child(1){
+		margin-left: 0;
+	}
+	.promotion_section .promotion_list li img{
+		height: 52px;
+	}
+	.promotion_section .promotion_list li h3{
+		margin: 30px 0 20px;
+		color: #616161;
+	}
+	.promotion_section .promotion_list li p{
+		font-size: 14px;
+		color: #616161;
+		line-height: 1.5;
+	}	
+	
+    /*3-3. 최근작업영역*/
+    .work_section{
+        /*값수정*/
+        margin-top: 100px;
+    }
+    .work_section .sec_title{
+        width: 90%;
+        /*값수정*/
+        width: 100%;
+        margin: 0 auto;
+        /*값수정*/
+        text-align: left;
+        /*값수정*/
+        margin-bottom: 80px;
+    }
+    .work_section .work_list{}
+    .work_section .work_list li{
+        /*값수정*/
+        width: 25%;
+        /*플롯*/
+        float: left;
+    }
+    .work_section .work_list li a{
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+    .work_section .work_list li img{
+        max-width: 100%;
+        width: 100%;
+    }
+	
+	/*3-4. 스토어영역 시작*/
+    .store_section{
+        /*값수정*/
+        margin-top: 124px;
+    }
+    .store_section .sec_title{
+        /*값수정*/
+        margin-bottom: 0;
+        /*text-align: center;*/
+        /*width: 288px;*/
+        /*플롯*/
+        float: left;
+    }
+    .store_section .store_list{
+        width: 844px;
+        /*(844/1132)*100*/
+        width: 74.5583038869258%;
+        /*플롯*/
+        float: right;
+    }
+    .store_section .store_list li{
+        /*값수정*/
+        margin-top: 0;
+        /*(박스하나:844-40=804/3=268px)*/
+        /*(268/844)*100*/
+        width: 31.75355450236967%;
+        margin-left: 20px;
+        /*(20/844)*100*/
+        margin-left: 2.369668246445498%;
+        /*플롯*/
+        float: left;
+    }
+    .store_section .store_list li:nth-child(1){
+        /*속성명변경*/
+        margin-left: 0;
+    }
+    .store_section .store_list li img{
+        max-width: 100%;
+        width: 100%;
+    }
+    .store_section .store_list li p{
+        font-size: 12px;
+        color: #9e9e9e;
+        margin: 10px 0;
+    }
+    .store_section .store_list li h3{
+        color: #424242;
+        line-height: 1.6;
+    }
+    
+    /*3-5. 연락처작업영역*/
+    .contact_section{
+        /*값수정*/
+        margin-top: 180px;
+    }
+    .contact_section .sec_title{
+        margin-bottom: 0;
+        /*값수정*/
+        /*text-align: center;*/
+        /*width: 288px;*/
+        /*플롯*/
+        float: left;
+    }
+    .contact_section .form_box{
+        width: 844px;
+        /*(844/1132)*100*/
+        width: 74.5583038869258%;
+        /*플롯*/
+        float: right;
+    }
+    .contact_section .form_box .form{
+        width: 412px;
+        /*(412/844)*100*/
+        width: 48.81516587677725%;
+        /*플롯*/
+        float: left;
+    }
+    .contact_section .form_box .txta{
+        width: 412px;
+        /*(412/844)*100*/
+        width: 48.81516587677725%;
+        /*플롯*/
+        float: right;
+    }
+    .contact_section .form_box .form{
+        margin-right: 20px;
+        /*(20/844)*100*/
+        margin-right: 2.369668246445498%;
+    }
+    
+    /*input요소 CSS*/
+    .contact_section .form_box .form input{
+        padding-bottom: 14px;
+        margin-bottom: 40px;
+    }
+    .contact_section .form_box .txta textarea{
+        height: 170px;
+    }
+    /*버튼 CSS*/
+    .contact_section .form_box .send_btn{
+        margin-top: 36px;
+        text-align: right;
+    }
+    .contact_section .form_box .send_btn button{
+        font-size: 12px;
+        color: #fff;
+        background: #616161;
+        font-family: "Montserrat", sans-serif;
+        padding: 15px;
+        border: 0;
+        cursor: pointer;
+    }
+}
